@@ -1,0 +1,9 @@
+# json
+.eslintrc.json
+package.json
+# ejs
+*.ejs
+src/libs/*
+src/assets/*
+zip/*
+

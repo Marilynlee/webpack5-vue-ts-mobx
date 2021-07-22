@@ -1,0 +1,106 @@
+$default-color-value: #5970dd;
+$normal-color-value: #51c88f;
+$warn-color-value: #dbad30;
+$error-color-value: rgb(219, 90, 157);
+$global-color-value: rgba(255, 255, 255, 0.65);
+$global-bg-dark-color: #191c35;
+
+@function pxToRem($col) {
+  @return ($col/16) * 1rem;
+}
+
+@mixin color-global-color {
+  color: $global-color-value;
+}
+
+@mixin border-global-color {
+  border: 1px solid $global-color-value;
+}
+
+@mixin bg-global-color {
+  background: $global-color-value;
+}
+
+//---default
+@mixin color-default-color {
+  color: $default-color-value;
+}
+
+@mixin border-default-color {
+  border: 1px solid rgba($default-color-value, 0.45);
+}
+
+@mixin bg-default-color {
+  background: $default-color-value;
+}
+
+@mixin bg-d-default-color {
+  background: mix($default-color-value, $global-bg-dark-color, 7.5);
+}
+
+@mixin bg-o-default-color {
+  background: rgba($default-color-value, 0.3);
+}
+
+//---normal
+@mixin color-normal-color {
+  color: $normal-color-value;
+}
+
+@mixin border-normal-color {
+  border: 1px solid rgba($normal-color-value, 0.45);
+}
+
+@mixin bg-normal-color {
+  background: $normal-color-value;
+}
+
+@mixin bg-d-normal-color {
+  background: mix($normal-color-value, $global-bg-dark-color, 7.5);
+}
+
+@mixin bg-o-normal-color {
+  background: rgba($normal-color-value, 0.3);
+}
+
+//---warn
+@mixin color-warn-color {
+  color: $warn-color-value;
+}
+
+@mixin border-warn-color {
+  border: 1px solid rgba($warn-color-value, 0.45);
+}
+
+@mixin bg-warn-color {
+  background: $warn-color-value;
+}
+
+@mixin bg-d-warn-color {
+  background: mix($warn-color-value, $global-bg-dark-color, 7.5);
+}
+
+@mixin bg-o-warn-color {
+  background: rgba($warn-color-value, 0.3);
+}
+
+//---error
+@mixin color-error-color {
+  color: $error-color-value;
+}
+
+@mixin border-error-color {
+  border: 1px solid rgba($error-color-value, 0.45);
+}
+
+@mixin bg-error-color {
+  background: $error-color-value;
+}
+
+@mixin bg-d-error-color {
+  background: mix($error-color-value, $global-bg-dark-color, 7.5);
+}
+
+@mixin bg-o-error-color {
+  background: rgba($error-color-value, 0.3);
+}

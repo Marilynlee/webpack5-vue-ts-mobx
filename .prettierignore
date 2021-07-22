@@ -1,0 +1,12 @@
+# Ignore artifacts:
+build
+.husky/*
+.lintstagedrc.js
+commitlint.config.js
+*.svg
+*.ejs
+*.html
+package.json
+src/assets/*
+src/libs/*
+zip/*

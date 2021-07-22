@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    // 以严格模式解析
+    "strict": false,
+    // 是否包含可以用于 debug 的 sourceMap
+    "sourceMap": true,
+    // 从 tslib 导入外部帮助库: 比如__extends，__rest等
+    "importHelpers": true,
+    // 采用的模块系统
+    "module": "CommonJS",
+    // 编译输出目标 ES 版本
+    "target": "ES5",
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    // 给错误和消息设置样式，使用颜色和上下文。
+    "pretty": true,
+    "rootDir": ".",
+    // 允许从没有设置默认导出的模块中默认导入
+//    "allowSyntheticDefaultImports": true,
+//    // 定义一个变量就必须给它一个初始值
+//    "strictPropertyInitialization" : false,
+    // 允许编译javascript文件
+    "allowJs": true,
+//    // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
+//    "noImplicitThis": false,
+    "noImplicitAny": false,
+//    // 如何处理模块
+    "moduleResolution": "node",
+    // 启用装饰器
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    // 指定特殊模块的路径
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+    },
+//    设置要包含的types
+    "types": [
+      "webpack-env",
+      "@types/node",
+      "./src/@types",
+      "./node_modules/element-ui/types"
+    ]
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+}
