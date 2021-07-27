@@ -5,6 +5,9 @@ import router from '../router/index'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// 导入默认全局样式
+import '@/assets/css/default.scss'
+
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 
