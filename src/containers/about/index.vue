@@ -1,6 +1,6 @@
 <template>
   <div class="about-wrap">
-    about
+    About page
   </div>
 </template>
 
@@ -15,7 +15,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-weight: normal;
+.about-wrap {
+  background: #51c88f;
+  font-size: 26px;
+  padding: 30px;
 }
 </style>

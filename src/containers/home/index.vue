@@ -1,21 +1,26 @@
 <template>
-  <section class="app-main-wrapper">
-    <router-link to="/home">
-      Home page
-    </router-link>
-    <router-link to="/about">
-      About page
-    </router-link>
-    <router-view />
-  </section>
-  <!--  <div>HOME</div>-->
+  <div class="home-page">
+    <h1>hello word!</h1>
+    <p v-text="state.age" />
+    <p v-text="state.computedAge" />
+    <button @click="state.setAge">
+      click me
+    </button>
+    <ul>
+      <li
+        v-for="user in state.users"
+        :key="user.name"
+      >
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { Observer } from 'mobx-vue'
-
-import { store } from '../store/home'
+import { store } from '@/store/home'
 
 @Observer
 @Component({
@@ -30,20 +35,14 @@ export default class App extends Vue {
   }
 
   public state = store
-
-  private mounted(): void {
-    console.log('mounted')
-  }
 }
 </script>
 
 <style scoped lang="scss">
-.app-main-wrapper {
-  width: 80vw;
+.home-page {
+  width: 100vw;
   height: 100vh;
   background: #fff;
-  //overflow: hidden;
-  //background: #2b333d;
   user-select: none;
 }
 </style>

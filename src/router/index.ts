@@ -1,6 +1,6 @@
 import Router from 'vue-router'
 
-import Home from '@/pages/app.vue'
+import Home from '@/containers/home/index.vue'
 import NotFound from '@/components/404/index.vue'
 
 const routes = [
