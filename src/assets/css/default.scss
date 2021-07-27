@@ -1,0 +1,300 @@
+@import 'utils';
+
+* {
+  box-sizing: border-box;
+  //color: $global-color-value;
+}
+
+body,
+html {
+  @media (max-width: 1280px) {
+    font-size: 10px;
+  }
+  @media (min-width: 1281px) and(max-width: 1440px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1441px) and(max-width: 1600px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1601px) and(max-width: 1920px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1921px) and(max-width: 2730px) {
+    font-size: 18px;
+  }
+  @media (min-width: 2731px) and(max-width: 3840px) {
+    font-size: 20px;
+  }
+  @media (min-width: 3841px) {
+    font-size: 32px;
+  }
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+$default-color: default-color;
+$normal-color: normal-color;
+$warn-color: warn-color;
+$error-color: error-color;
+$global-color: global-color;
+.color-transparent {
+  color: transparent;
+}
+
+.#{$global-color} {
+  @include color-global-color;
+}
+
+.#{$global-color}-bd {
+  @include border-global-color;
+}
+
+.#{$global-color}-bg {
+  @include bg-global-color;
+}
+
+//---default
+.#{$default-color} {
+  @include color-default-color;
+}
+
+.#{$default-color}-bd {
+  @include border-default-color;
+}
+
+.#{$default-color}-bg {
+  @include bg-default-color;
+}
+
+.#{$default-color}-bg-d {
+  @include bg-d-default-color;
+}
+
+.#{$default-color}-bg-o {
+  @include bg-o-default-color;
+}
+
+.#{$default-color}-box-o {
+  @include color-default-color;
+  @include border-default-color;
+  @include bg-o-default-color;
+}
+
+.#{$default-color}-box-d {
+  @include color-default-color;
+  @include border-default-color;
+  @include bg-d-default-color;
+}
+
+//---normal
+.#{$normal-color}-bd {
+  @include border-normal-color;
+}
+
+.#{$normal-color} {
+  @include color-normal-color;
+}
+
+.#{$normal-color}-bg {
+  @include bg-normal-color;
+}
+
+.#{$normal-color}-bg-d {
+  @include bg-d-normal-color;
+}
+
+.#{$normal-color}-bg-o {
+  @include bg-o-normal-color;
+}
+
+.#{$normal-color}-box-o {
+  @include color-normal-color;
+  @include border-normal-color;
+  @include bg-o-normal-color;
+}
+
+.#{$normal-color}-box-d {
+  @include color-normal-color;
+  @include border-normal-color;
+  @include bg-d-normal-color;
+}
+
+//---warn
+.#{$warn-color} {
+  @include color-warn-color;
+}
+
+.#{$warn-color}-bd {
+  @include border-warn-color;
+}
+
+.#{$warn-color}-bg {
+  @include bg-warn-color;
+}
+
+.#{$warn-color}-bg-d {
+  @include bg-d-warn-color;
+}
+
+.#{$warn-color}-bg-o {
+  @include bg-o-warn-color;
+}
+
+.#{$warn-color}-box-o {
+  @include color-warn-color;
+  @include border-warn-color;
+  @include bg-o-warn-color;
+}
+
+.#{$warn-color}-box-d {
+  @include color-warn-color;
+  @include border-warn-color;
+  @include bg-d-warn-color;
+}
+
+//---error
+.#{$error-color} {
+  @include color-error-color;
+}
+
+.#{$error-color}-bd {
+  @include border-error-color;
+}
+
+.#{$error-color}-bg {
+  @include bg-error-color;
+}
+
+.#{$error-color}-bg-d {
+  @include bg-d-error-color;
+}
+
+.#{$error-color}-bg-o {
+  @include bg-o-error-color;
+}
+
+.#{$error-color}-box-o {
+  @include color-error-color;
+  @include border-error-color;
+  @include bg-o-error-color;
+}
+
+.#{$error-color}-box-d {
+  @include color-error-color;
+  @include border-error-color;
+  @include bg-d-error-color;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.spin-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.default-tag,
+.error-tag,
+.warn-tag {
+  margin-left: 0.5rem;
+  line-height: 1;
+  height: 16px;
+  font-size: 12px;
+  padding: 0 0.5rem;
+  border-radius: 2px;
+}
