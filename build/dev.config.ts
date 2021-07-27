@@ -46,6 +46,7 @@ const config = {
 			'process.env.NODE_ENV': JSON.stringify('development'),
 		}),
 	],
+	target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
 	devServer: {
 		contentBase: path.resolve(__dirname, '../dist'),
 		port: 8080,
